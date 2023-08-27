@@ -1,0 +1,21 @@
+pipeline{
+    agent { label 'Master'}
+
+    stages{
+        stage ('test'){
+            steps{
+                sh "mvn clean compile test"
+            }
+        }
+        stage ('Build application'){
+            steps{
+                echo "Mvn clean install"
+            }
+        }
+        stage ('create docker image'){
+            steps{
+                echo "Creando docker"
+            }
+        }
+    }
+}
