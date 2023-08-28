@@ -1,6 +1,8 @@
 pipeline{
     agent { label 'master'}
-
+    parameters{
+        string description: 'Esteban Franco', name: 'fullName'
+    }
     stages{
         stage ('test'){
             steps{
@@ -9,7 +11,7 @@ pipeline{
         }
         stage ('Build application'){
             steps{
-                echo "Mvn clean install"
+                echo "Mvn clean install ${params.fullName}"
             }
         }
         stage ('create docker image'){
