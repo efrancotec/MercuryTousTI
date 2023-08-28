@@ -4,9 +4,7 @@ pipeline{
     stages{
         stage ('test'){
             steps{
-                dir("build_java"){
-                    sh "mvn test clean"
-                }
+                sh "mvn test clean"
             }
         }
         stage ('Build application'){
