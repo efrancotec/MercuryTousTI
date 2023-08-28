@@ -13,7 +13,7 @@
         </groups>-->
         <classes>
             <!--<class name="Test.GroupExample"/>-->
-            <class name="Test.JenkinsTest"/>
+            <class name="Test.LoginTests"/>
         </classes>
     </test>
 
